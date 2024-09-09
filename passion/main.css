@@ -62,8 +62,22 @@ h2 {
 }
 
 a {
-    font-size: 16px;
-    color:rgb(119, 22, 7);
+    font-size: 18px;
+    color:#431f13;
+    text-decoration:none;
+}
+
+.game {
+    font-size: 18px;
+    color:#431f13;
+    text-decoration:none;
+    font-weight: bold;
+}
+
+a:hover {
+    font-size: 18px;
+    color:rgb(192, 143, 137);
+    text-decoration:none;
 }
 
 li {
@@ -74,7 +88,6 @@ li {
         font-family:monospace;
         white-space:pre;
         text-align:left;
-        width:825px;
         margin:0 auto;
     }
 
@@ -82,7 +95,18 @@ li {
     font-size: 16px;
     color:rgb(240, 234, 234);
     background:rgb(176, 42, 89);
-    border:rgb(176, 42, 89) solid 3px;
+    border:3px rgb(176, 42, 89) solid;
+    border-radius: 5px;
+    padding: 7px;
+    text-decoration: none;
+    transition:.25s;
+}
+
+.button:hover {
+    font-size: 16px;
+    color:rgb(240, 234, 234);
+    background:#7e1d3f;
+    border:solid 3px #7e1d3f;
     border-radius: 5px;
     padding: 7px;
     text-decoration: none;
@@ -98,4 +122,20 @@ details {
   details > summary {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
+  }
+
+  .column {
+    float:left;
+    padding:5px;
+    margin:10px 0px;
+  }
+  
+  .left {
+    width: 44%;
+    align-content: flex-start;
+  }
+  
+  .right {
+    width: 54%;
+    align-content: end;
   }
