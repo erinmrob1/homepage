@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.block {
+    background: rgb(255, 203, 230);
+    border: solid 1px rgb(231, 145, 159);
+    padding: 10px;
+}
+
+.inline {
+    background: #bcd0ff;
+    padding:10px;
+    margin:10px;
+    /* width:200px; */
+    display:inline-block;
+}
+
+.container {
+    background: rgb(213, 255, 246);
+    border: 1px solid rgb(99, 167, 167);
+    padding: 10px;
+    height:600px;
+
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap: 20px;
+
+    align-items: center;
+    /* align-items aligns items onn the vert axis for non-wrapping row flexboxes */
+
+    align-content:center;
+    /* align-content aligns items on the vert axis for wrapping row flexboxes */
+}
+
+.item {
+    background: rgb(235, 255, 193);
+    border: 1px solid rgb(175, 208, 127);
+    padding: 10px;
+    color: darkolivegreen;
+    width:200px;
+}
