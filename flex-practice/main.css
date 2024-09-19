@@ -11,6 +11,16 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: #7accd9;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #b8e4eb;
+}
+
 .main-container {
     height:100vh;
     padding: 10px;
