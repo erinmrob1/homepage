@@ -7,8 +7,22 @@ img {
 }
 
 body {
-    margin: 40px;
+    padding: 10px 30px 0px 30px;
     background: black;
+    text-align: center;
+
+}
+
+a {
+    font-family: Helvetica;
+    font-size: 16px;
+    text-decoration: none;
+    color: #aaaaaa;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #505050;
 }
 
 .container {
@@ -16,18 +30,18 @@ body {
     width:100%;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
 }
 
 .row {
     display: flex;
     height: 100%;
     flex-direction: row;
-    gap: 12px;
+    gap: 8px;
 }
 
 .bulb {
-    background: rgb(43, 43, 43);
+    background: rgb(29, 29, 29);
     width:100%;
     border-radius: 50%;
 }
@@ -36,6 +50,7 @@ body {
     background: rgb(0, 0, 0);
     width:100%;
     border-radius: 50%;
+    animation: bye 1s forwards;
 }
 
 .lit {
@@ -47,7 +62,7 @@ body {
 .lit-1 {
     width:100%;
     border-radius: 50%;
-    animation: flicker .5s 1s forwards;
+    animation: flicker-2 .5s 1s forwards;
 }
 
 .lit-2 {
@@ -89,7 +104,7 @@ body {
 .lit-8 {
     width:100%;
     border-radius: 50%;
-    animation: flicker .5s 5s forwards;
+    animation: flicker-2 .5s 5s forwards;
 }
 
 .lit-9 {
@@ -101,7 +116,7 @@ body {
 .lit-10 {
     width:100%;
     border-radius: 50%;
-    animation: flicker .5s 6s forwards;
+    animation: flicker-2 .5s 6s forwards;
 }
 
 @keyframes flicker {
@@ -110,5 +125,35 @@ body {
        }
     100% {
         background: rgb(255, 231, 163);
+    }
+   }
+
+   @keyframes flicker-2 {
+    0% {
+        background: rgb(43, 43, 43);
+       }
+    15% {
+        background: rgb(255, 231, 163);
+    }
+    30% {
+        background: rgb(43, 43, 43);
+       }
+    85% {
+        background: rgb(255, 231, 163);
+    }
+    99% {
+        background: rgb(43, 43, 43);
+       }
+    100% {
+        background: rgb(255, 231, 163);
+    }
+   }
+
+   @keyframes bye {
+    0% {
+        background: rgb(43, 43, 43);
+       }
+    100% {
+        background: rgb(0, 0, 0);
     }
    }
