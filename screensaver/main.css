@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    margin: 40px;
+    background: black;
+}
+
+.container {
+    height:90vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.row {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.bulb {
+    background: rgb(43, 43, 43);
+    width:100%;
+    border-radius: 50%;
+}
+
+.bulb:hover {
+    background: rgb(0, 0, 0);
+    width:100%;
+    border-radius: 50%;
+}
+
+.lit {
+    width:100%;
+    border-radius: 50%;
+    animation: flicker .5s forwards;
+}
+
+.lit-1 {
+    width:100%;
+    border-radius: 50%;
+    animation: flicker .5s 1s forwards;
+}
+
+.lit-2 {
+    width:100%;
+    border-radius: 50%;
+    animation: flicker .5s 1.5s forwards;
+}
+
+.lit-3 {
+    width:100%;
+    border-radius: 50%;
+    animation: flicker .5s 2s forwards;
+}
+
+.lit-4 {
+    width:100%;
+    border-radius: 50%;
+    animation: flicker .5s 2.5s forwards;
+}
+
+.lit-5 {
+    width:100%;
+    border-radius: 50%;
+    animation: flicker .5s 3.5s forwards;
+}
+
+.lit-6 {
+    width:100%;
+    border-radius: 50%;
+    animation: flicker .5s 4s forwards;
+}
+
+.lit-7 {
+    width:100%;
+    border-radius: 50%;
+    animation: flicker .5s 4.5s forwards;
+}
+
+.lit-8 {
+    width:100%;
+    border-radius: 50%;
+    animation: flicker .5s 5s forwards;
+}
+
+.lit-9 {
+    width:100%;
+    border-radius: 50%;
+    animation: flicker .5s 5.5s forwards;
+}
+
+.lit-10 {
+    width:100%;
+    border-radius: 50%;
+    animation: flicker .5s 6s forwards;
+}
+
+@keyframes flicker {
+    0% {
+        background: rgb(43, 43, 43);
+       }
+    100% {
+        background: rgb(255, 231, 163);
+    }
+   }
