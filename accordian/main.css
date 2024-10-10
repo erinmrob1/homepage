@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background: rgb(195, 225, 230);
+    color:rgb(255, 255, 255);
+    font-family: helvetica;
+    transition: 3s;
+    padding: 15px;
+}
+
+.container {
+    max-width:1300px;
+    margin:0 auto;
+}
+
+header, footer, .top, .center,.bottom, .mobile-banner {
+    padding:15px;
+}
+
+header, footer {
+    width:100%;
+    background: rgb(196, 148, 70);
+}
+
+header {
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    text-align:center;
+
+}   
+
+
+.mobile-banner {
+    margin-top:10px;
+    text-align:center;
+    background: rgb(118, 95, 136);
+    display: none;
+}
+
+main {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+    gap:10px;
+}
+
+.top {
+    width:100%;
+    background: rgb(114, 53, 42);
+    border: rgb(114, 53, 42) solid 30px ;
+
+}
+
+.bottom {
+    width:90%;
+    background: rgb(196, 27, 18);
+    border: rgb(196, 27, 18) solid 15px;
+}
+
+.center {
+    width:105%;
+    background: rgb(123, 170, 41);
+}
+
+.more-1 {
+    width:95%;
+    background: #ea8984;
+    border: #ea8984 solid 15px;
+    display:none;
+}
+
+.more-2 {
+    width:107%;
+    background: #ffdd46;
+    border: #ffdd46 solid 4px;
+    display:none;
+}
+
+.more-3 {
+    width:70%;
+    background: #7baa29;
+    border: #7baa29 solid 20px;
+    display:none;
+}
+
+.more-4 {
+    width:100%;
+    background: #ffffff;
+    display:none;
+    color:lightgray;
+}
+
+.more-5 {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    display:none;
+}
+
+.ring {
+    width: 40%;
+    background: #97713b;
+    border: #97713b solid 60px;
+}
+
+.more-6 {
+    width:107%;
+    background: #ffa83d;
+    border: #ffa83d solid 3px;
+    display:none;
+}
+
+.more-7 {
+    width:110%;
+    background: #7baa29;
+    border: #7baa29 solid 12px;
+    display:none;
+}
+
+.more-8 {
+    width:100%;
+    background: #d89090;
+    border-top: #ea8984 solid 15px;
+    border-bottom: #ea8984 solid 15px;
+    display:none;
+}
+
+.more-9 {
+    width:100%;
+    background: #c49446;
+    border: #c49446 solid 50px;
+    display:none;
+}
+
+.more-10 {
+    width:70%;
+    background: #f5e0de;
+    border: #f5e0de solid 10px;
+    display:none;
+}
+
+.more-11 {
+    width:100%;
+    color:lightgray;
+    background: #ffffff;
+    border-top: #c493d8 solid 3px;
+    border-bottom: #c493d8 solid 3px;
+    display:none;
+}
+
+.more-12 {
+    width:70%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    display:none;
+}
+
+.pickles {
+    width: 30%;
+    background: #4f7027;
+    border: #4f7027 solid 20px;
+}
+
+p {
+    padding:15px;
+}
+
+/* max-width - desktop first, min-width - mobile first */
+@media screen and (max-width:1200px) {
+    body {
+        background: rgb(192, 217, 166);
+        font-size: 100%;
+    }
+
+    .more-1 {
+        display:flex;
+    }
+
+    .more-2 {
+        display:flex;
+    }
+
+    .more-3 {
+        display:flex;
+
+    }
+
+}
+
+@media screen and (max-width:1050px) {
+    body {
+        background: rgb(229, 222, 167);
+        font-size: 105%;
+    }
+
+    .more-4 {
+        display:flex;
+    }
+
+    .more-5 {
+        display:flex;
+    }
+
+    .more-6 {
+        display:flex;
+
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    body {
+        background: rgb(237, 206, 166);
+        font-size: 110%;
+    }
+
+    .more-7 {
+        display:flex;
+    }
+
+    .more-8 {
+        display:flex;
+    }
+
+
+}
+
+@media screen and (max-width:650px) {
+    body {
+        background: rgb(237, 166, 188);
+        font-size: 110%;
+    }
+
+    .more-9 {
+        display:flex;
+    }
+
+    .more-10 {
+        display:flex;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    body {
+        background: rgb(212, 192, 225);
+        font-size: 125%;
+    }
+
+    .more-11 {
+        display:flex;
+    }
+
+    .more-12 {
+        display:flex;
+    }
+
+    .mobile-banner {
+        display:block;
+    }
+
+}

@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background: lightblue;
+    font-family: "Cormorant Garamond", serif;
+}
+
+h1 {
+    font-family: 'metropolisbold', sans-serif;
+}
+
+@font-face {
+    font-family: 'metropolisbold';
+    src: url('metropolis-bold-webfont.woff2') format('woff2'),
+         url('metropolis-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
