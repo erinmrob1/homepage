@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background: rgb(226, 221, 219);
+    transition: background-color 1s;
+}
+
+body.dark {
+    background: rgb(207, 202, 201);
+}
+
+.menu {
+    background: rgb(226, 221, 219);
+    position: fixed;
+    right:-200px;
+    top:0;
+    height: 100%;
+    width:200px;
+    padding:20px;
+    text-align:center;
+    transition: right 1s, background 1s;
+    border-left:1px solid
+}
+
+.menu.glow {
+    background: rgb(246, 242, 241);
+}
+
+.menu.active {
+    right:0;
+}
+
+.gear {
+    background: lemonchiffon;
+    height:100px;
+    width:100px;
+    position:fixed;
+    bottom:30px;
+    left:30px;
+    transition: transform 1s, background 1s;
+}
+
+.gear.spin {
+    transform: rotate(90deg);
+}
+
+.gear.glow {
+    background: white;
+}
