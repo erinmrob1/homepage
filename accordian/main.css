@@ -14,6 +14,12 @@ body {
     padding: 15px;
 }
 
+a {
+    color:rgb(33, 41, 25);
+    text-decoration: none;
+    font-size: 10px;
+}
+
 .container {
     max-width:1300px;
     margin:0 auto;
