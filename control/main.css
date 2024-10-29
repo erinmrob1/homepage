@@ -12,7 +12,7 @@ body {
     font-family: "Instrument Serif", serif;
     font-size: 100px;
     color: #000000;
-    transition: 2s;
+    transition: 1.5s;
 }
 
 a {
@@ -41,29 +41,34 @@ a {
 
 .pink {
     color: #e36799;
-    transition: 2s;
 }
 
 .blue {
     color: #558dd7;
-    transition: 2s;
 }
 
+.light {
+    color: #EAE9E6;
+    background: #ffffff;
+}
+
+
 .sans {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     font-size: 87px;
+    transition:linear 1s;
 }
 
 .display {
-    font-family: cursive;
-    font-size: 90px;
+    font-family:fantasy;
+    font-size: 75px;
+    transition:linear .5s;
 }
 
 .rainbow {
     color: #e36799;
     animation: rainbow 5s infinite linear;
-    transition: 3s;
 }
 
 @keyframes rainbow {
@@ -140,6 +145,8 @@ a {
     .words {
         height:110px;
     }
+
+
 }
 
 @media screen and (max-width:600px) {
@@ -149,6 +156,14 @@ a {
 
     .words {
         height:70px;
+    }
+
+    .sans {
+        font-size: 50px;
+    }
+
+    .display {
+        font-size: 45px;
     }
 }
 

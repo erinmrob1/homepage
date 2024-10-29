@@ -1,4 +1,4 @@
-$( ".draggable, .draggable-mode, .draggable-is-1, .draggable-is-2, .draggable-color-1, .draggable-color-2, .draggable-sans" ).draggable({ snap: ".fill", containment: "document",
+$( ".draggable, .draggable-mode, .draggable-is-1, .draggable-is-2, .draggable-color-1, .draggable-color-2, .draggable-sans, .draggable-display" ).draggable({ snap: ".fill", containment: "document",
  });
 
 // DARK/LIGHT FUNCTION
@@ -23,21 +23,21 @@ $( ".draggable, .draggable-mode, .draggable-is-1, .draggable-is-2, .draggable-co
 
 //   TV RAINBOW FUNCTIONS
 
-  $( function() {
-    $( ".droppable-is" ).droppable({
-      accept: ".draggable-is-1",
-      tolerance: "intersect",
-      classes: {
-      },
-      drop: function( event, ui ) {
-        $("video").addClass( "show" )
-      },
-      out: function( event, ui ) {
-        $("video").toggleClass( "show" )
+  // $( function() {
+  //   $( ".droppable-is" ).droppable({
+  //     accept: ".draggable-is-1",
+  //     tolerance: "intersect",
+  //     classes: {
+  //     },
+  //     drop: function( event, ui ) {
+  //       $("video").addClass( "show" )
+  //     },
+  //     out: function( event, ui ) {
+  //       $("video").toggleClass( "show" )
 
-      }
-    });
-  } );
+  //     }
+  //   });
+  // } ); COME BACK TO? MIGHT WORK NOW / NEEDS SMALLER VIDEO
 
   $( function() {
     $( ".droppable-is" ).droppable({
@@ -58,73 +58,78 @@ $( ".draggable, .draggable-mode, .draggable-is-1, .draggable-is-2, .draggable-co
     });
   } );
 
+  // $( function() {
+  //   $( ".droppable-is" ).droppable({
+  //     accept: ".draggable-is-2, .draggable-is-1",
+  //     tolerance: "intersect",
+  //     drop: function( event, ui ) {
+  //       if (ui.draggable.hasClass("draggable-is-2")) {
+  //       $("body").toggleClass( "rainbow" ),
+  //       $(".fill").toggleClass("underline-3")
+  //       }
+  //       else (ui.draggable.hasClass("draggable-is-1"))
+  //       $("body").toggleClass( "light" ),
+  //       $(".fill").toggleClass("underline-2")
+  //     },
+  //     out: function( event, ui ) {
+  //       if (ui.draggable.hasClass("draggable-is-2")) {
+  //         $("body").toggleClass( "rainbow" ),
+  //         $(".fill").toggleClass("underline-3")
+  //         }
+  //         else (ui.draggable.hasClass("draggable-is-1"))
+  //         $("body").toggleClass( "light" ),
+  //         $(".fill").toggleClass("underline-2")
+  //     }
+  //   });
+  // } ); CANT GET THIS TO WORK >:C
+
   //   COLORS
 
-//   $( function() {
-//     $( ".droppable-color" ).droppable({
-//       accept: ".draggable-color-1",
-//       tolerance: "intersect",
-//       classes: {
-//       },
-//       drop: function( event, ui ) {
-//         $("body").addClass( "blue" ),
-//         $(".fill").addClass("underline-4")
-//       },
-//       out: function( event, ui ) {
-//         $("body").removeClass( "blue" ),
-//         $(".fill").removeClass("underline-4")
 
-//       }
-//     });
-//   } );
-
+  $(function() {
+    $(".droppable-color-2").droppable({
+      accept: ".draggable-color-1, .draggable-color-2, .draggable-mode",
+      tolerance: "intersect",
+      drop: function(event, ui) {
+        if (ui.draggable.hasClass("draggable-color-1")) {
+          $("body").addClass("blue");
+          $(".fill").addClass("underline-4");
+        } else if (ui.draggable.hasClass("draggable-color-2")) {
+          $("body").addClass("pink");
+          $(".fill").addClass("underline-3");
+        }
+      },
+      out: function(event, ui) {
+        if (ui.draggable.hasClass("draggable-color-1")) {
+          $("body").removeClass("blue");
+          $(".fill").removeClass("underline-4");
+        } else if (ui.draggable.hasClass("draggable-color-2")) {
+          $("body").removeClass("pink");
+          $(".fill").removeClass("underline-3");
+        }
+      }
+    });
+  });
 
   //   FONTS
 
-  $( function() {
-    $( ".droppable-font" ).droppable({
-      accept: ".draggable-sans",
+  $(function() {
+    $(".droppable-font").droppable({
+      accept: ".draggable-sans, .draggable-display",
       tolerance: "intersect",
-      classes: {
+      drop: function(event, ui) {
+        if (ui.draggable.hasClass("draggable-sans")) {
+          $("body").addClass("sans");
+        } else if (ui.draggable.hasClass("draggable-display")) {
+          $("body").addClass("display");
+        }
       },
-      drop: function( event, ui ) {
-        $("body").toggleClass( "sans" )
-      },
-      out: function( event, ui ) {
-        $("body").toggleClass( "sans" )
+      out: function(event, ui) {
+        if (ui.draggable.hasClass("draggable-sans")) {
+          $("body").removeClass("sans");
+        } else if (ui.draggable.hasClass("draggable-display")) {
+          $("body").removeClass("display");
+        }
       }
     });
-  } );
-
-//   $( function() {
-//     $( ".droppable-font" ).droppable({
-//       accept: ".draggable-display",
-//       tolerance: "intersect",
-//       classes: {
-//       },
-//       drop: function( event, ui ) {
-//         $("body").toggleClass( "display" )
-//       },
-//       out: function( event, ui ) {
-//         $("body").toggleClass( "display" )
-//       }
-//     });
-//   } );
-
-$( function() {
-    $( ".droppable-color-2" ).droppable({
-      accept: ".draggable-color-2",
-      tolerance: "intersect",
-      classes: {
-      },
-      drop: function( event, ui ) {
-        $("body").addClass( "pink" ),
-        $(".fill").addClass("underline-3")
-      },
-      out: function( event, ui ) {
-        $("body").removeClass( "pink" ),
-        $(".fill").removeClass("underline-3")
-
-      }
-    });
-  } );
+  });
